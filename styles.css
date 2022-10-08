@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightsteelblue;
+}
+.slider-container{
+    /* setting the width of the conatiner, */
+    width: 500px;
+    height: 300px;
+    /* so that only one image is shown */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+    position: relative;
+    
+}
+.img-container{
+    display: flex;  /*so that images are next to each other */
+    /* transform brings the next image ,when overflow is not set to hidden, 1000px for the third image and so on,,,we have to this using JS */
+    /* transform: translateX(-500px); */
+    transition: transform .4s ease-in-out;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .5;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 1;
+}   
+.btn.prev{
+    left: 10px;
+}
+.btn.next{
+    right: 10px;
+}
